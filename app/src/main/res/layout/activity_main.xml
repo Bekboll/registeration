@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/image"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tool_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вход"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="200dp"
+        />
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добро Пожаловать"
+        app:layout_constraintBottom_toTopOf="@id/out"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выполните вход!"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@id/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="или зарегистрируйтесь."
+        app:layout_constraintBottom_toTopOf="@id/gmail"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="23sp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <EditText
+        android:id="@+id/gmail"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        android:background="@drawable/style_edit_text"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:hint="gmail.com"
+        android:paddingStart="26dp"
+        android:inputType="textEmailAddress"
+        />
+
+
+
+<EditText
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@drawable/style_edit_text"
+    app:layout_constraintBottom_toTopOf="@id/btn_come"
+    android:layout_marginHorizontal="25dp"
+    android:layout_marginBottom="10dp"
+    android:hint="password"
+    android:paddingStart="26dp"
+    android:inputType="textPassword"
+
+    />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_come"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintBottom_toTopOf="@id/forgot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="войти"
+        app:cornerRadius="6dp"
+        android:backgroundTint="#B1AFAF"
+        android:layout_marginBottom="50dp"
+        />
+
+    <TextView
+        android:id="@+id/forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="забыли пороль ?"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tap"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_marginBottom="50dp"
+        android:id="@+id/tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="нажмите сюда!"
+        android:textColor="#CF8517"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/forgot"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
